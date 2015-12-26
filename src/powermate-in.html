@@ -1,0 +1,84 @@
+<!--
+# Copyright (c) 2015, Matt Brailsford, aka Circuitbeard <hi@circuitveard.co.uk>   
+#  
+# Permission to use, copy, modify, and/or distribute this software for  
+# any purpose with or without fee is hereby granted, provided that the  
+# above copyright notice and this permission notice appear in all copies.  
+#  
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL  
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED  
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR  
+# BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES  
+# OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,  
+# WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,  
+# ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS  
+# SOFTWARE. 
+-->
+
+<script type="text/x-red" data-template-name="powermate-in">
+	<div class="form-row">
+        <label for="node-input-device"><i class="fa fa-tag"></i> Device</label>
+        <input type="text" id="node-input-device" placeholder="Device" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name" />
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="powermate-in">
+	<p>This node listens to a PowerMate Bluetooth device for device events.</p>
+	<p>Select or connect to a new PowerMate device via the <i>Device</i> field. The <b>msg.payload</b> property contains the parsed event value. Additionally, <b>msg.topic</b> contains the name of the captured event.</p>
+	<p>Possible events/values are:</p>
+	<table class="node-info">
+		<tbody>
+			<tr>
+				<td><b>Event</b></td>
+				<td><b>Values</b></td>
+			</tr>
+			<tr>
+				<td>battery</td>
+				<td>
+					<ul>
+						<li>Integer percentage battery level between 0 and 100</li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<td>knob</td>
+				<td>
+					<ul>
+						<li>'release' for the release of a short press</li>
+						<li>'clockwise' for a clockwise rotation</li>
+						<li>'anticlockwise' for an anticlockwise rotation</li>
+						<li>'hold1' to 'hold6' for a long press</li>
+						<li>'holdClockwise' for a clockwise rotation whilst depressed</li>
+						<li>'holdAnticlockwise' for an anticlockwise rotation whilst depressed</li>
+						<li>'holdRelease' for the release of a long press</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+    <p>For further info see the <a href="https://circuitbeard.co.uk" target="_blank">Circuitbeard website</a>.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('powermate-in',{
+        category: 'input',
+        defaults: {
+        	device: {value:"", type:"powermate-device"},
+            name: {value:""}
+        },
+        color: "#2980b9",
+        inputs: 0,
+        outputs: 1,
+        icon: "powermate.png",
+        label: function() {
+            return this.name || "PowerMate";
+        },
+        labelStyle: function() {
+            return this.name ? "node_label_italic": "";
+        }
+    });
+</script>

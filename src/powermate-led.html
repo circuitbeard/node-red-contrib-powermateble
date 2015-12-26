@@ -1,0 +1,60 @@
+<!--
+# Copyright (c) 2015, Matt Brailsford, aka Circuitbeard <hi@circuitveard.co.uk>   
+#  
+# Permission to use, copy, modify, and/or distribute this software for  
+# any purpose with or without fee is hereby granted, provided that the  
+# above copyright notice and this permission notice appear in all copies.  
+#  
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL  
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED  
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR  
+# BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES  
+# OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,  
+# WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,  
+# ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS  
+# SOFTWARE. 
+-->
+
+<script type="text/x-red" data-template-name="powermate-led">
+	<div class="form-row">
+        <label for="node-input-device"><i class="fa fa-tag"></i> Device</label>
+        <input type="text" id="node-input-device" placeholder="Device" />
+    </div>
+    <div class="form-row">
+        <label for="node-input-brightness"><i class="fa fa-lightbulb-o"></i> Brightness</label>
+        <input type="text" id="node-input-brightness" placeholder="Brightness" style="width:100px;" /> %
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name" />
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="powermate-led">
+    <p>This node sets the brightness of a PowerMate Bluetooth device LED.</p>
+    <p>Select or connect to a new PowerMate device via the <i>Device</i> field., then enter the percentage brightness into the <i>Brightness</i> field. If left blank the passed in <b>msg.payload</b> will be used.</p>
+    <p>Setting a value of <b>-1</b> will pusle the LED.</p>
+    <p>For further info see the <a href="https://circuitbeard.co.uk" target="_blank">Circuitbeard website</a>.</p>
+</script>
+
+<script type="text/javascript">
+    RED.nodes.registerType('powermate-led',{
+        category: 'output',
+        defaults: {
+        	device: {value:"", type:"powermate-device"},
+            brightness: {value:""},
+            name: {value:""}
+        },
+        color: "#2980b9",
+        inputs: 1,
+        outputs: 0,
+        icon: "powermate_led.png",
+        align: "right",
+        label: function() {
+            return this.name || "PowerMate LED";
+        },
+        labelStyle: function() {
+            return this.name ? "node_label_italic": "";
+        }
+    });
+</script>
