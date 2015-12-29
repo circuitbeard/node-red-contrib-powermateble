@@ -36,7 +36,7 @@ Select or connect to a new PowerMate device via the _Device_ field by entering i
 
 Possible events/value combinations are:
 
-<table cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+<table cellspacing="0" cellpadding="0" style="border-collapse:collapse;width:100%;">
 	<thead>
 		<tr>
 			<td><b>Event</b></td>
@@ -69,7 +69,15 @@ Possible events/value combinations are:
 	</tbody>
 </table>
 
-![Screenshot1](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen1.PNG) 
+![Screenshot1](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/b65177cc94d5411f905d852e527a89e25f61f421/assets/screen1_2.PNG) 
+
+_**Caption:** powermate-in config dalog_
+
+![Screenshot2](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/b65177cc94d5411f905d852e527a89e25f61f421/assets/screen1_3.PNG) 
+
+_**Caption:** powermate-in device dialog_
+
+![Screenshot3](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen1.PNG) 
 
 _**Caption:** powermate-in node wired to debug_
 
@@ -81,7 +89,11 @@ Select or connect to a new PowerMate device via the _Device_ field  by entering 
 
 Setting a value of **-1** will pulse the LED.
 
-![Screenshot2](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen2.PNG) 
+![Screenshot4](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/b65177cc94d5411f905d852e527a89e25f61f421/assets/screen2_2.PNG) 
+
+_**Caption:** powermate-led config dialog_
+
+![Screenshot5](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen2.PNG) 
 
 _**Caption:** powermate-LED node wired to random percentage generator_
 
