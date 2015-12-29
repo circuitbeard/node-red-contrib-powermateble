@@ -69,6 +69,8 @@ Possible events/value combinations are:
 	</tbody>
 </table>
 
+#### Screenshots
+
 ![Screenshot1](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/b65177cc94d5411f905d852e527a89e25f61f421/assets/screen1_2.PNG) 
 
 _**Caption:** powermate-in config dalog_
@@ -88,6 +90,8 @@ A node that sets the brightness of a PowerMate Bluetooth device LED.
 Select or connect to a new PowerMate device via the _Device_ field  by entering it's MAC address. Enter the percentage brightness into the _Brightness_ field to set the devices LED brightness. If left blank the passed in **msg.payload** will be used.
 
 Setting a value of **-1** will pulse the LED.
+
+#### Screenshots
 
 ![Screenshot4](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/b65177cc94d5411f905d852e527a89e25f61f421/assets/screen2_2.PNG) 
 
