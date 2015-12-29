@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-powermateble",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node-RED node for interacting with a PowerMate Bluetooth device",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
       "powermate-led": "src/powermate-led.js"
     }
   },
-  "dependencies"  : {
-      "noble": ">=1.2.1"
+  "dependencies": {
+    "noble": ">=1.2.1"
   },
   "author": "Matt Brailsford aka Circuitbeard <hi@circuitbeard.co.uk> (http://circuitbeard.co.uk)",
   "license": "MIT"
