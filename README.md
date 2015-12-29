@@ -69,10 +69,19 @@ Possible events/value combinations are:
 	</tbody>
 </table>
 
+![Screenshot1](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen1.PNG) 
+
+_**Caption:** powermate-in node wired to debug_
+
 ### powermate-led
 
 A node that sets the brightness of a PowerMate Bluetooth device LED.
 
 Select or connect to a new PowerMate device via the _Device_ field  by entering it's MAC address. Enter the percentage brightness into the _Brightness_ field to set the devices LED brightness. If left blank the passed in **msg.payload** will be used.
 
-Setting a value of **-1** will pusle the LED.
+Setting a value of **-1** will pulse the LED.
+
+![Screenshot2](https://cdn.rawgit.com/circuitbeard/node-red-contrib-powermateble/788d98dba4a0aa73fceb38dda342c58b25ab473a/assets/screen2.PNG) 
+
+_**Caption:** powermate-LED node wired to random percentage generator_
+
